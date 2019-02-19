@@ -1,10 +1,16 @@
 #cloud-config
 
 # remove this block entirely if not using password authentication
-password: Asdfqwerty
+password: qweqweqwe123
 ssh_pwauth: True
 chpasswd: { expire: False }
 
-# replace with your own public key (e.g. ~/.ssh/id_rsa.pub)
-ssh_authorized_keys:
-  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIq9uNlEi5R9Riqk8fpg5bs/24gYNlohR8zqd7fBONa65IXYs+Zignc+NGlX5JtVANhDQmULd36lY90SHpsSVqzEfTEBaAZE92ypfERIlyvoNQA5FajuxSLGxagwhnTxVzZ7FQ+faVFNmpSU3kGMYefPsnC8ykXexzBmKmviu8olPMvY0uUJRDvJ7OyVLk88M1J6LtACw66WLUEwx5v61d+/oiYb1L7ILZNExWXyLZUeMnP/Ke+77Rvd3F3AzgFByk5kFPVqeYo2CN+CU+Rc7SarlP33dkEOWhnvHGdn0i6k2ZtpwrmnM9M0EQFTAitHgvcEjWNiiecJXKi8vBRpFZ example@example.com
+users:
+  - default
+  - name: mycard
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCf7d3z1zJ3+AekdFlF+7BTL8k1X5YrC/Mu23aBBETYxl7N37XM/Ts1u15Xu9l0rgKOe2YphAzexsTmvnBW+3ZJUaJ4gIelw2FWYSHmPkcTtLRrqmSqqCVqyxLrlkvDV1mJmRTQh9rFT3OM2jge4HkN2PSnxuT4AuRwblHcGj2LWD/4XijmHf/BK6GaKownt702ARX18D7d2hYZwO7TgVtJsZclIg3g9SjLgtx6sx+Khlx2/p3HdMo7lYmbucnk1Px11Z0Uq6H7gdUyZhRMWgHnqpnzTy02onhsDhPotUbJdEHJKMZW+eg3X1KiPH143jDHPW/EQjhnPfMBBqaPof1l nanahira@nanahira-another
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHGVL1kDsi3BOyPBQnNL/ZAKuYzBeJGr9EwqQBwr5l5q zh99998@gmail.com
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: /bin/bash
