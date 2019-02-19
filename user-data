@@ -1,16 +1,24 @@
 #cloud-config
 
-# remove this block entirely if not using password authentication
-password: qweqweqwe123
+# MyCard Senya Server cloud init user files.
+
+
+# This part is for testing, and unused.
+#password: qweqweqwe123
+#ssh_authorized_keys: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCf7d3z1zJ3+AekdFlF+7BTL8k1X5YrC/Mu23aBBETYxl7N37XM/Ts1u15Xu9l0rgKOe2YphAzexsTmvnBW+3ZJUaJ4gIelw2FWYSHmPkcTtLRrqmSqqCVqyxLrlkvDV1mJmRTQh9rFT3OM2jge4HkN2PSnxuT4AuRwblHcGj2LWD/4XijmHf/ BK6GaKownt702ARX18D7d2hYZwO7TgVtJsZclIg3g9SjLgtx6sx+Khlx2/p3HdMo7lYmbucnk1Px11Z0Uq6H7gdUyZhRMWgHnqpnzTy02onhsDhPotUbJdEHJKMZW+eg3X1KiPH143jDHPW/EQjhnPfMBBqaPof1l nanahira@nanahira-another
+
+# Uncomment those if password auth is needed.
 ssh_pwauth: True
 chpasswd: { expire: False }
 
+#Default Users. Now Nanahira's and zh99998's public keys are added here by default. Extra public keys could be added if you need.
 users:
   - default
   - name: mycard
-    ssh-authorized-keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCf7d3z1zJ3+AekdFlF+7BTL8k1X5YrC/Mu23aBBETYxl7N37XM/Ts1u15Xu9l0rgKOe2YphAzexsTmvnBW+3ZJUaJ4gIelw2FWYSHmPkcTtLRrqmSqqCVqyxLrlkvDV1mJmRTQh9rFT3OM2jge4HkN2PSnxuT4AuRwblHcGj2LWD/4XijmHf/BK6GaKownt702ARX18D7d2hYZwO7TgVtJsZclIg3g9SjLgtx6sx+Khlx2/p3HdMo7lYmbucnk1Px11Z0Uq6H7gdUyZhRMWgHnqpnzTy02onhsDhPotUbJdEHJKMZW+eg3X1KiPH143jDHPW/EQjhnPfMBBqaPof1l nanahira@nanahira-another
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCf7d3z1zJ3+AekdFlF+7BTL8k1X5YrC/Mu23aBBETYxl7N37XM/Ts1u15Xu9l0rgKOe2YphAzexsTmvnBW+3ZJUaJ4gIelw2FWYSHmPkcTtLRrqmSqqCVqyxLrlkvDV1mJmRTQh9rFT3OM2jge4HkN2PSnxuT4AuRwblHcGj2LWD/4XijmHf/ BK6GaKownt702ARX18D7d2hYZwO7TgVtJsZclIg3g9SjLgtx6sx+Khlx2/p3HdMo7lYmbucnk1Px11Z0Uq6H7gdUyZhRMWgHnqpnzTy02onhsDhPotUbJdEHJKMZW+eg3X1KiPH143jDHPW/EQjhnPfMBBqaPof1l nanahira@nanahira-another
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHGVL1kDsi3BOyPBQnNL/ZAKuYzBeJGr9EwqQBwr5l5q zh99998@gmail.com
+    password: MyCardVM
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     groups: sudo
     shell: /bin/bash
