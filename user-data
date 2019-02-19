@@ -16,10 +16,10 @@ users:
 #Config for 3rd party VMs.
 
 # Uncomment those if SSH public key auth is needed.
-ssh_authorized_keys: 
-  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCf7d3z1zJ3+AekdFlF+7BTL8k1X5YrC/Mu23aBBETYxl7N37XM/Ts1u15Xu9l0rgKOe2YphAzexsTmvnBW+3ZJUaJ4gIelw2FWYSHmPkcTtLRrqmSqqCVqyxLrlkvDV1mJmRTQh9rFT3OM2jge4HkN2PSnxuT4AuRwblHcGj2LWD/4XijmHf/BK6GaKownt702ARX18D7d2hYZwO7TgVtJsZclIg3g9SjLgtx6sx+Khlx2/p3HdMo7lYmbucnk1Px11Z0Uq6H7gdUyZhRMWgHnqpnzTy02onhsDhPotUbJdEHJKMZW+eg3X1KiPH143jDHPW/EQjhnPfMBBqaPof1l nanahira@nanahira-another
+#ssh_authorized_keys: 
+#  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCf7d3z1zJ3+AekdFlF+7BTL8k1X5YrC/Mu23aBBETYxl7N37XM/Ts1u15Xu9l0rgKOe2YphAzexsTmvnBW+3ZJUaJ4gIelw2FWYSHmPkcTtLRrqmSqqCVqyxLrlkvDV1mJmRTQh9rFT3OM2jge4HkN2PSnxuT4AuRwblHcGj2LWD/4XijmHf/BK6GaKownt702ARX18D7d2hYZwO7TgVtJsZclIg3g9SjLgtx6sx+Khlx2/p3HdMo7lYmbucnk1Px11Z0Uq6H7gdUyZhRMWgHnqpnzTy02onhsDhPotUbJdEHJKMZW+eg3X1KiPH143jDHPW/EQjhnPfMBBqaPof1l nanahira@nanahira-another
 
 # Uncomment those if password auth is needed.
-ssh_pwauth: True
-chpasswd: { expire: False }
-password: qweqweqwe123
+#ssh_pwauth: True
+#chpasswd: { expire: False }
+#password: qweqweqwe123
